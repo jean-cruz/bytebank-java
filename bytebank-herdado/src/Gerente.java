@@ -2,18 +2,16 @@ public class Gerente extends Funcionario {
     private int senha;
 
     public boolean autentica(int senha){
-        if (this.senha == senha){
+        if(this.senha == senha){
             return true;
-        }else{
-            return false;
         }
+        return false;
     }
-    /*public double getBonificacao(){
-        return this.salario * 0.1;
-    }*/
-
+    public double getBonificacao(){
+        return super.salario;
+    }
     public int getSenha() {
-        return senha;
+        return this.senha;
     }
 
     public void setSenha(int senha) {
