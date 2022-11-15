@@ -1,9 +1,19 @@
 public class TesteReferencias {
     public static void main(String[] args) {
-        Funcionario g1 = new Gerente();
+        Gerente g1 = new Gerente();
         g1.setNome("Marcos");
-        String nome = g1.getNome();
+        g1.setSalario(5000.0);
 
-        System.out.println(nome);
+        Funcionario f = new Funcionario();
+        f.setSalario(2000.0);
+
+        EditorVideo ev = new EditorVideo();
+        ev.setSalario(2500);
+
+        ControleBonificacao controle = new ControleBonificacao();
+        controle.registro(g1);
+        controle.registro(f);
+        controle.registro(ev);
+        System.out.println(controle.getSoma());
     }
 }
