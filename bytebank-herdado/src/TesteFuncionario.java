@@ -1,6 +1,6 @@
 public class TesteFuncionario {
     public static void main(String[] args) {
-        Funcionario nico = new Funcionario();
+        Funcionario nico = new Gerente();
         nico.setNome("Nico Steppat");
         nico.setCpf("1231231230-9");
         nico.setSalario(2600.00);
