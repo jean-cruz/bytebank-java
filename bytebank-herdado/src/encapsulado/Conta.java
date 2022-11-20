@@ -1,7 +1,7 @@
 package encapsulado;
 
 public abstract class Conta {
-
+    @DoublePositivo
     protected double saldo;
     private int agencia;
     private int numero;
