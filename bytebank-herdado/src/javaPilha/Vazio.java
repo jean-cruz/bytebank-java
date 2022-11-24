@@ -1,7 +1,7 @@
 package javaPilha;
 
-public class Vazio {
-    void emBranco(){
+public class Vazio  {
+    void emBranco() throws MinhaExcecao {
 
     }
 }
