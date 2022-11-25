@@ -1,4 +1,8 @@
-package encapsulado;
+package encapsulado.teste;
+
+import encapsulado.modelo.ContaCorrente;
+import encapsulado.modelo.ContaPoupanca;
+import encapsulado.modelo.SaldoInsuficienteException;
 
 public class TesteContas {
     public static void main(String[] args) throws SaldoInsuficienteException {
@@ -8,7 +12,8 @@ public class TesteContas {
         ContaCorrente outra = null;
         outra.deposita(200.0);
         */
-        ContaCorrente cc = new ContaCorrente(111,111);
+        //Full Qualified Name - quando o nome da classe é composto pelo nome do pacote junto
+        ContaCorrente cc = new encapsulado.modelo.ContaCorrente(111,111);
         cc.deposita(100.0);
 
         ContaPoupanca cp = new ContaPoupanca(222,222);

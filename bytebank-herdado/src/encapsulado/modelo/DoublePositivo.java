@@ -1,4 +1,4 @@
-package encapsulado;
+package encapsulado.modelo;
 
 
 import java.lang.annotation.ElementType;

@@ -1,4 +1,8 @@
-package encapsulado;
+package encapsulado.teste;
+
+import encapsulado.modelo.CalculadorDeImposto;
+import encapsulado.modelo.ContaCorrente;
+import encapsulado.modelo.SeguroDeVida;
 
 public class TesteTributaveis {
     public static void main(String[] args) {

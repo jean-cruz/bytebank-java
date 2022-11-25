@@ -1,4 +1,4 @@
-package encapsulado;
+package encapsulado.modelo;
 
 public class SeguroDeVida implements Tributavel {
     public static void main(String[] args) {

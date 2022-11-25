@@ -1,4 +1,8 @@
-package encapsulado;
+package encapsulado.teste;
+
+import encapsulado.modelo.Conta;
+import encapsulado.modelo.ContaCorrente;
+import encapsulado.modelo.SaldoInsuficienteException;
 
 public class TesteSaca {
     public static void main(String[] args) {

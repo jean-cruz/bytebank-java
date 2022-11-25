@@ -1,4 +1,4 @@
-package encapsulado;
+package encapsulado.modelo;
 
 public class ContaCorrente extends Conta implements Tributavel {
     public ContaCorrente(int agencia, int numero){
