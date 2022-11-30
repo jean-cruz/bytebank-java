@@ -21,5 +21,19 @@ public class TesteString {
         System.out.println("toLowerCase:"+nome.toLowerCase());
         System.out.println("toUpperCase:"+nome.toUpperCase());
         System.out.println("charAt :"+nome.charAt(2));
+        System.out.println("indexOf :"+nome.indexOf("ur"));
+        System.out.println("substring :"+nome.substring(1));
+        System.out.println("substring :"+nome.length());
+
+        for (int i=0;i<nome.length();i++){
+            System.out.print(nome.charAt(i));
+        }
+        System.out.println("");
+
+        String vazio = "";
+        System.out.println("isEmpty :"+vazio.isEmpty());
+        System.out.println("isEmpty espaço:"+" ".isEmpty());
+        System.out.println("Trim :"+" Jean Vinicius Santos da Cruz ".trim());
+        System.out.println("contains :"+nome.contains("Alu"));
     }
 }
