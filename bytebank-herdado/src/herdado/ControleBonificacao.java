@@ -1,3 +1,5 @@
+package herdado;
+
 public class ControleBonificacao {
     private double soma;
 

@@ -1,3 +1,7 @@
+package herdado;
+
+import herdado.Autenticavel;
+
 public class SistemaInterno {
     private int senha = 2222;
 

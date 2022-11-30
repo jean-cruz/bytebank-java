@@ -1,3 +1,5 @@
+package herdado;
+
 public class AutenticacaoUtil {
     private int senha;
 

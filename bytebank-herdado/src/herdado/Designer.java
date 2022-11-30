@@ -1,7 +1,9 @@
+package herdado;
+
 public class Designer extends Funcionario implements Autenticavel {
     private int senha;
     public double getBonificacao(){
-        System.out.println("chamando a bonificação do Designer.");
+        System.out.println("chamando a bonificação do herdado.Designer.");
         return 200;
     }
     @Override

@@ -1,3 +1,5 @@
+package herdado;
+
 //contrato autenticavel
 //quem assina esse contrato, precisa implementar
     //metodo setSenha

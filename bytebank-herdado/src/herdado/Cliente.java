@@ -1,3 +1,8 @@
+package herdado;
+
+import herdado.AutenticacaoUtil;
+import herdado.Autenticavel;
+
 public class Cliente implements Autenticavel {
     private AutenticacaoUtil autenticacaoUtil;
     public Cliente(){
