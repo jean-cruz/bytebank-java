@@ -87,5 +87,8 @@ public abstract class Conta {
     public static int getTotal(){
         return Conta.total;
     }
-
+    @Override
+    public String toString() {
+        return "Numero:"+this.getNumero()+", Agencia:"+this.getAgencia()+", Saldo:"+this.getSaldo();
+    }
 }
