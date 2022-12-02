@@ -1,5 +1,6 @@
 package br.com.bytebank.banco.test.util;
 
+import br.com.bytebank.banco.modelo.Cliente;
 import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 
@@ -7,7 +8,11 @@ import java.util.ArrayList;
 
 public class Teste {
     public static void main(String[] args) {
-        ArrayList lista = new ArrayList();
+        //Generics
+        ArrayList<Conta> lista = new ArrayList<Conta>();
+
+        //Cliente cl = new Cliente();
+        //lista.add(cl);
 
         Conta cc= new ContaCorrente(22,11);
         lista.add(cc);
@@ -17,7 +22,7 @@ public class Teste {
 
         System.out.println(lista.size());
 
-        Conta ref = (Conta) lista.get(0);
+        Conta ref = lista.get(0);
         System.out.println(ref.getNumero());
 
         lista.remove(0);
@@ -34,7 +39,7 @@ public class Teste {
             System.out.println(oRef);
         }
         System.out.println("--------------------------------");
-        for (Object oRef: lista) {
+        for (Conta oRef: lista) {
             System.out.println(oRef);
         }
     }
