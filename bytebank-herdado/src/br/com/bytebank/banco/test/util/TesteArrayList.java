@@ -4,10 +4,16 @@ import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Vector;
 
 public class TesteArrayList {
     public static void main(String[] args) {
         //Generics
+        //ArrayList<Conta> lista = new ArrayList<Conta>();
+        //LinkedList<Conta> lista = new LinkedList<Conta>();
+        //List<Conta> lista = new Vector<Conta>();
         ArrayList<Conta> lista = new ArrayList<Conta>();
 
         //Cliente cl = new Cliente();
