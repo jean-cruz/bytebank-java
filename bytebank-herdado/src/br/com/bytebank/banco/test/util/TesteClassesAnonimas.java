@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class Teste {
+public class TesteClassesAnonimas {
     public static void main(String[] args) {
         Conta cc1 = new ContaCorrente(22, 33);
         Cliente clienteCC1 = new Cliente();
@@ -43,15 +43,26 @@ public class Teste {
         lista.add(cc4);
 
         //Function Object
-        lista.sort((conta1,conta2) -> Integer.compare(conta1.getNumero(),conta2.getNumero()));
+        lista.sort(new Comparator<Conta>() {
+            @Override
+            public int compare(Conta conta1, Conta conta2) {
+                return Integer.compare(conta1.getNumero(),conta2.getNumero());
+            }
+        });
 
-        Comparator<Conta> comp = (Conta conta1, Conta conta2) -> {
+        Comparator<Conta> comp = new Comparator<Conta>(){
+            @Override
+            public int compare(Conta conta1, Conta conta2) {
                 String nome1 = conta1.getTitular().getNome();
                 String nome2 = conta2.getTitular().getNome();
 
                 return nome1.compareTo(nome2);
+            }
         };
-        lista.sort(comp);
-        lista.forEach(conta -> System.out.println(conta+","+conta.getTitular().getNome()));
+
+        for (Conta conta : lista) {
+            System.out.println(conta + ", "+conta.getTitular().getNome());
+        }
+
     }
 }
