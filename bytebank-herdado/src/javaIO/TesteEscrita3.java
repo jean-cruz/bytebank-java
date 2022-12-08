@@ -8,7 +8,7 @@ public class TesteEscrita3 {
         //OutputStream fos = new FileOutputStream("lorem2.txt");
         //Writer osw = new OutputStreamWriter(fos);
         //BufferedWriter bw = new BufferedWriter(osw);
-
+        long ini = System.currentTimeMillis();
         //BufferedWriter bw = new BufferedWriter(new FileWriter("lorem2.txt"));
         //PrintStream ps = new PrintStream(new File("lorem2.txt"));
         PrintWriter ps = new PrintWriter("lorem2.txt");
@@ -18,5 +18,8 @@ public class TesteEscrita3 {
         ps.println();
         ps.println("dasdasdasdasd dladsadjçasdka daçldas teste escrita 3"+ps.getClass().getName());
         ps.close();
+        long fim = System.currentTimeMillis();
+        System.out.println("Passaram " + (fim - ini) + " milissegundos");
+
     }
 }
