@@ -1,6 +1,7 @@
 package javaIO;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 public class TesteEscritaPrintStreamPrintWrite {
     public static void main(String[] args) throws IOException {
@@ -11,7 +12,7 @@ public class TesteEscritaPrintStreamPrintWrite {
         long ini = System.currentTimeMillis();
         //BufferedWriter bw = new BufferedWriter(new FileWriter("lorem2.txt"));
         //PrintStream ps = new PrintStream(new File("lorem2.txt"));
-        PrintWriter ps = new PrintWriter("lorem2.txt");
+        PrintWriter ps = new PrintWriter("lorem2.txt", "UTF-8");;
         ps.println("during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.");
         ps.println();
         ps.println();
