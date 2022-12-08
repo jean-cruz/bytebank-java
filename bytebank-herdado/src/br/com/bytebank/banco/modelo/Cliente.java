@@ -1,13 +1,16 @@
 package br.com.bytebank.banco.modelo;
 
+import java.io.Serializable;
+
 /**
  * Classe que representa um cliente no ByteBank.
  *
  * @author jean.cruz
  * @version 0.2
  */
-public class Cliente {
+public class Cliente implements Serializable {
 
+    private static final long serialVersionUID = 1l;
     private String nome;
     private String cpf;
     private String profissao;
@@ -29,6 +32,10 @@ public class Cliente {
     }
     public void setProfissao(String profissao) {
         this.profissao = profissao;
+    }
+
+    public String getNomeCpf(){
+        return this.nome+" "+this.cpf;
     }
 
 }
