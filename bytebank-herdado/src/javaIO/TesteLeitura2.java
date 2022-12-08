@@ -18,6 +18,8 @@ public class TesteLeitura2 {
             linhaScanner.useLocale(Locale.US);
             linhaScanner.useDelimiter(",");
 
+            System.out.format("formatando %06.3d",9.3);
+
             String tipo = linhaScanner.next();
             int agencia = linhaScanner.nextInt();
             int numero = linhaScanner.nextInt();
