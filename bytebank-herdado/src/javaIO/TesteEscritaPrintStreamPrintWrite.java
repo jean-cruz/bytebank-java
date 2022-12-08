@@ -2,7 +2,7 @@ package javaIO;
 
 import java.io.*;
 
-public class TesteEscrita3 {
+public class TesteEscritaPrintStreamPrintWrite {
     public static void main(String[] args) throws IOException {
         //fluxo de entrada com arquivo
         //OutputStream fos = new FileOutputStream("lorem2.txt");
