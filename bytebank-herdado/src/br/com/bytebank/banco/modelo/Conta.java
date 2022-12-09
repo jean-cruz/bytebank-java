@@ -12,7 +12,7 @@ public abstract class Conta implements Comparable<Conta>, Serializable {
     double saldo;
     private int agencia;
     private int numero;
-    private Cliente titular;
+    private transient Cliente titular;
     private static int total = 0;
 
     /**

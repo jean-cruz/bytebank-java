@@ -12,7 +12,7 @@ public class TesteDeserializacao {
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream("cc.bin"));
         ContaCorrente objRetorno = (ContaCorrente) ois.readObject();
         System.out.println(objRetorno.getNumero());
-        System.out.println(objRetorno.getTitular().getNome());
+        System.out.println(objRetorno.getTitular());
         ois.close();
 
     }
