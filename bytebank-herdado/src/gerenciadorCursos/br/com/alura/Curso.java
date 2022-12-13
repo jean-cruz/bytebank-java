@@ -29,4 +29,19 @@ public class Curso {
     public String getInstrutor() {
         return instrutor;
     }
+    public int getTempoTotal(){
+        /*
+        int tempoTotal = 0;
+        for (Aula aula: aulas){
+            tempoTotal += aula.getTempo();
+        }
+        return tempoTotal;
+        */
+        return this.aulas.stream().mapToInt(Aula::getTempo).sum();
+    }
+
+    @Override
+    public String toString() {
+        return "[Curso:"+this.nome+", tempo total: "+this.getTempoTotal()+",aulas: "+this.aulas +" ]";
+    }
 }
