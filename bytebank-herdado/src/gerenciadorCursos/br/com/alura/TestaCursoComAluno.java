@@ -1,7 +1,9 @@
 package gerenciadorCursos.br.com.alura;
 
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.Set;
+import java.util.Vector;
 
 public class TestaCursoComAluno {
     public static void main(String[] args) {
@@ -41,6 +43,14 @@ public class TestaCursoComAluno {
 
         System.out.println(a1.hashCode() == turini.hashCode());
 
+        Set<Aluno> alunos = javaColecoes.getAlunos();
+        Iterator<Aluno> iterador = alunos.iterator();
+        while(iterador.hasNext()){
+            Aluno proximo = iterador.next();
+            System.out.println(proximo);
+        }
+
+        //Vector<Aluno> vetor = new Vector<>();
     }
 
 }

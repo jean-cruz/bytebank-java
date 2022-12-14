@@ -6,7 +6,7 @@ public class Curso {
     private String nome;
     private String instrutor;
     private List<Aula> aulas = new ArrayList<>();
-    private Set<Aluno> alunos = new HashSet<>();
+    private Set<Aluno> alunos = new HashSet<>(); //TreeSet<>(); //HashSet<>(); //LinkedHashSet<>();
 
     public Curso(String nome, String instrutor) {
         super();
