@@ -29,6 +29,18 @@ public class TestaCursoComAluno {
         //System.out.println(nomes);
         //Set<Aluno> alunosSincronizados = Collections.synchronizedSet(javaColecoes.getAlunos());
         //alunosSincronizados.forEach(a -> System.out.println(a));
+        System.out.println("O aluno "+a1+" está matriculado ?");
+        System.out.println(javaColecoes.estaMatriculado(a1));
+
+        Aluno turini = new Aluno("Rodrigo Turini",34672);
+        System.out.println("E esse Turini, está matriculado ?");
+        System.out.println(javaColecoes.estaMatriculado(turini));
+
+        System.out.println("o a1 é igual ao turini ?"+(a1 == turini));
+        System.out.println("equals ?"+a1.equals(turini));
+
+        System.out.println(a1.hashCode() == turini.hashCode());
+
     }
 
 }
