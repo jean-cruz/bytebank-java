@@ -11,17 +11,11 @@ public class OrdenaStrings {
         palavras.add("Ana");
         palavras.add("José");
 
-        Comparator<String> comparador = new ComparadorPorTamanho();
-        palavras.sort(comparador);
-        //Collections.sort(palavras,comparador);
+        palavras.sort((s1,s2) -> Integer.compare(s1.length(),s2.length()));
+
         System.out.println(palavras);
-
-        //for (String p: palavras) {
-        //   System.out.println(p);
-        //}
-
-        Consumer<String> consumidor = new ImprimeNalinha();
-        palavras.forEach(consumidor);
+        Consumer<String> impressor = s -> System.out.println(s);
+        palavras.forEach(s -> System.out.println(s));
     }
 }
 class ImprimeNalinha implements Consumer<String> {
