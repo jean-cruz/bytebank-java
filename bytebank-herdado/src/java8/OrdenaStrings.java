@@ -4,21 +4,28 @@ import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
+import static java.util.Comparator.comparing;
+
 public class OrdenaStrings {
     public static void main(String[] args) {
         List<String> palavras = new ArrayList<>();
-        palavras.add("Jean");
-        palavras.add("Carlos");
+        palavras.add("JeAn");
+        palavras.add("CArlos");
         palavras.add("Ana");
-        palavras.add("José");
+        palavras.add("JoSé");
 
-        //palavras.sort((s1,s2) -> Integer.compare(s1.length(),s2.length()));
+        System.out.println("original="+palavras);
+        System.out.println("-----------------------------------------------------");
+        palavras.sort((s1,s2) -> Integer.compare(s1.length(),s2.length()));
+        System.out.println("sort pelo tamanho com lambda="+palavras);
+        System.out.println("-----------------------------------------------------");
+        palavras.sort(Comparator.comparing(s -> s.length()));
+        palavras.sort(comparing(String::length));
+        System.out.println("sort pelo tamanho com method references="+palavras);
+        System.out.println("-----------------------------------------------------");
 
-        //palavras.sort(Comparator.comparing(s -> s.length()));
-        palavras.sort(Comparator.comparing(String::length));
-
-        Function<String,Integer> funcao = String::length;
-        Function<String,Integer> funcao2 = s -> s.length();
+        //Function<String,Integer> funcao = String::length;
+        //Function<String,Integer> funcao2 = s -> s.length();
 
         Function<String,Integer> funcao3 = new Function<String, Integer>() {
             @Override
@@ -26,14 +33,21 @@ public class OrdenaStrings {
                 return s.length();
             }
         };
-        Comparator<String> comparator = Comparator.comparing(funcao3);
+        Comparator<String> comparator = comparing(funcao3);
         palavras.sort(comparator);
+        System.out.println("sort pelo tamanho com função anonima="+palavras);
+        System.out.println("-----------------------------------------------------");
 
-        System.out.println(palavras);
         Consumer<String> impressor = s -> System.out.println(s);
         palavras.forEach(s -> System.out.println(s));
+
         System.out.println("-----------------------------------------------------");
+        System.out.println("Method references");
         palavras.forEach(System.out::println);
+        System.out.println("-----------------------------------------------------");
+        palavras.sort(String.CASE_INSENSITIVE_ORDER);
+        System.out.println("sort pelo case="+palavras);
+        System.out.println("-----------------------------------------------------");
     }
 }
 class ImprimeNalinha implements Consumer<String> {
