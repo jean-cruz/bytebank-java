@@ -3,6 +3,7 @@ package gerenciadorCursos.br.com.alura;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class ExemploCursos {
     public static void main(String[] args) {
@@ -30,6 +31,9 @@ public class ExemploCursos {
                 .sum();
         System.out.println(sum);
 
+        Stream<String> nomes = cursos.stream().map(CursoExemplo::getNome);
+        nomes.forEach(System.out::println);
+        //System.out.println(cursos.stream().map(CursoExemplo::getNome));
 
     }
 }
