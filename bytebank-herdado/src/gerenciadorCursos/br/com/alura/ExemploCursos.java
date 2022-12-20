@@ -1,8 +1,7 @@
 package gerenciadorCursos.br.com.alura;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class ExemploCursos {
@@ -33,7 +32,32 @@ public class ExemploCursos {
 
         Stream<String> nomes = cursos.stream().map(CursoExemplo::getNome);
         nomes.forEach(System.out::println);
-        //System.out.println(cursos.stream().map(CursoExemplo::getNome));
+        System.out.println("----------------------------------------------");
+
+       // Optional<CursoExemplo> optionalCursoExemplocurso =
+        cursos.stream()
+                .filter(c -> c.getAlunos() >= 100)
+                .findAny()
+                .ifPresent(c -> System.out.println(c.getNome()));
+
+        //CursoExemplo curso = optionalCursoExemplocurso.orElse(null);
+        //System.out.println(curso.getNome());
+        //optionalCursoExemplocurso.ifPresent(c -> System.out.println(c.getNome()));
+        System.out.println("----------------------------------------------");
+        OptionalDouble media = cursos.stream()
+                .filter(c -> c.getAlunos() >= 100)
+                .mapToInt(CursoExemplo::getAlunos)
+                .average();
+        System.out.println("----------------------------------------------");
+        cursos = cursos.stream()
+                .filter(c->c.getAlunos() >= 100)
+                .collect(Collectors.toList());
+        cursos.forEach(cursoExemplo -> System.out.println(cursoExemplo.getNome()));
+        System.out.println("----------------------------------------------");
+        cursos.stream()
+                .filter(c->c.getAlunos() >= 100)
+                .collect(Collectors.toMap(c->c.getNome(),c->c.getAlunos()))
+                .forEach((nome,alunos) -> System.out.println(nome + " tem "+alunos+" alunos"));
 
     }
 }
